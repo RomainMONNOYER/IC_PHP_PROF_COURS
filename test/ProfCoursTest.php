@@ -96,7 +96,9 @@ class ProfCoursTest extends TestCase
             new Cours("Cours7", "3", 5),       // idcours = 7   ** A SUPPRIMER **
             new Cours("Cours8", "4", 5),       // idcours = 8
             new Cours("Cours9", "3", 5),        // idcours = 9   ** A MODIFIER **
-            
+            new Cours("Cours10", "3", 5),        // idcours = 9   ** A MODIFIER **
+
+
             /**
             *
             * Question 7 : Insérer les enregistrements suivantes dans la table cours
