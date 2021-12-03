@@ -340,10 +340,10 @@ class ProfCoursTest extends TestCase
 
         // Prof
         $prof = new Prof($this->nom, $this->prenom, $this->date, $this->lieu);
-        $val = $prof->updateOne($conn, $idProf);
+        $val = $prof->updateOne($conn);
         $expected_prof_str = $prof->__toString();
-        $record_prof = Prof::printOne($conn, $idProf);
-        $this->assertEquals($expected_prof_str, $record_prof->__toString(), "Update du prof $idProf ...\n");
+        $record_prof = Prof::printOne($conn);
+        $this->assertEquals($expected_prof_str, $record_prof->__toString(), "Update du Prof $idProf ...\n");
         $this->assertTrue($val, "Update du prof num $idProf ...\n");
 
         // Cours
