@@ -13,4 +13,3 @@ _`vendor/bin/phpunit --bootstrap vendor/autoload.php test`_
 # Last_IC_PHP_PROF_COURS
 # IC_PHP_Code_Base
 # IC_PHP_PROF_COURS
-modif
