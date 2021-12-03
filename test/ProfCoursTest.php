@@ -339,20 +339,20 @@ class ProfCoursTest extends TestCase
         $idCours = 9;
 
         // Prof
-//        $prof = new Prof($this->nom, $this->prenom, $this->date, $this->lieu);
-//        $val = $prof->updateOne($conn, $idProf);
-//        $expected_prof_str = $prof->__toString();
-//        $record_prof = Prof::printOne($conn, $idProf);
-//        $this->assertEquals($expected_prof_str, $record_prof->__toString(), "Update du prof $idProf ...\n");
-//        $this->assertTrue($val, "Update du prof num $idProf ...\n");
+        $prof = new Prof($this->nom, $this->prenom, $this->date, $this->lieu);
+        $val = $prof->updateOne($conn, $idProf);
+        $expected_prof_str = $prof->__toString();
+        $record_prof = Prof::printOne($conn, $idProf);
+        $this->assertEquals($expected_prof_str, $record_prof->__toString(), "Update du prof $idProf ...\n");
+        $this->assertTrue($val, "Update du prof num $idProf ...\n");
 
         // Cours
-        $cours = new Cours($this->intitule, $this->duree);
-        $val = $cours->updateOne($conn, $idCours);
-        $expected_cours_str = $cours->__toString();
-        $record_cours = Cours::printOne($conn, $idCours);
-        $this->assertEquals($expected_cours_str, $record_cours->__toString(), "Update du cours $idCours ...\n");
-        $this->assertTrue($val, "Update du cours num $idCours ...\n");
+//        $cours = new Cours($this->intitule, $this->duree);
+//        $val = $cours->updateOne($conn, $idCours);
+//        $expected_cours_str = $cours->__toString();
+//        $record_cours = Cours::printOne($conn, $idCours);
+//        $this->assertEquals($expected_cours_str, $record_cours->__toString(), "Update du cours $idCours ...\n");
+//        $this->assertTrue($val, "Update du cours num $idCours ...\n");
         /**
         *
         * Question 11 :	Dans la fonction « testUpdateOne() », 
