@@ -82,6 +82,9 @@ class ProfCoursTest extends TestCase
             new Prof("Nom_prof9", "Prenom_prof9", "10/09/1982", "lieu_prof9"),      // idprof = 9
             new Prof("Nom_prof10", "Prenom_prof10", "10/10/1982", "lieu_prof10")    // idprof = 10      ** A MODIFIER **
         ];
+//        foreach (self::$prof_a as $p){
+//            $p::add(self::$conn);
+//        }
 
         self::$cours_a = [
             new Cours("Cours1", "2", 1),       // idcours = 1
@@ -101,6 +104,9 @@ class ProfCoursTest extends TestCase
             */
 
         ];
+//        foreach (self::$cours_a as $c){
+//            $c::add(self::$conn);
+//        }
         
     }
     
@@ -180,6 +186,10 @@ class ProfCoursTest extends TestCase
         foreach (self::$cours_a as $cours) {
             $cours->add($conn);
         }
+        $expected = count(self::$cours_a);
+        $num_records = Cours::count($conn);
+        $this->assertEquals($expected, $num_records, "Enregistrement des profs ...\n");
+        $this->assertCount($num_records, self::$prof_a, "Enregistrement des profs ...\n");
         
         /**
         *
@@ -211,7 +221,14 @@ class ProfCoursTest extends TestCase
 
         
         // Cours
-        
+        $record_cours_a = Cours::printAll($conn);
+        print "########## - LISTE DES COURS - APRES PROF ########## \n";
+        foreach ( $record_cours_a as $record_cours ) {
+            print $record_cours;
+        }
+        print "################################################################\n\n";
+        $this->assertCount(count(Self::$cours_a), $record_cours_a, "Nombre d'enregistrement égale pour Prof\n");
+
         /**
         *
         * Question 9 : Dans la fonction « testPrintAll() », 
