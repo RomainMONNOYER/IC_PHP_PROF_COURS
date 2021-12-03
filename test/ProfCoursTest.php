@@ -81,7 +81,7 @@ class ProfCoursTest extends TestCase
             new Prof("Nom_prof8", "Prenom_prof8", "10/08/1982", "lieu_prof8"),      // idprof = 8       ** A SUPPRIMER **
             new Prof("Nom_prof9", "Prenom_prof9", "10/09/1982", "lieu_prof9"),      // idprof = 9
             new Prof("Nom_prof10", "Prenom_prof10", "10/10/1982", "lieu_prof10"),    // idprof = 10
-            new Prof("Nom_prof11", "Prenom_prof11", "10/10/1982", "lieu_prof11")    // idprof = 11       ** A MODIFIER **
+//            new Prof("Nom_prof11", "Prenom_prof11", "10/10/1982", "lieu_prof11")    // idprof = 11       ** A MODIFIER **
         ];
 //        foreach (self::$prof_a as $p){
 //            $p::add(self::$conn);
